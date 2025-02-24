@@ -1,0 +1,106 @@
+1). What is a Database? Why Do We Need a Database?
+
+A database is an organized collection of data that can be easily accessed, managed, and updated. It is used to store large amounts of structured information efficiently.
+
+Example:
+  1. Consider a university that stores student information like name, roll number, course, and grades.
+  2. If this data were stored in separate files, searching and updating would be difficult.
+  3. A database allows easy retrieval, modification, and management of student records.
+
+Why Do We Need a Database?
+  1. Data Organization: Structures data in tables, making it easy to retrieve.
+  2. Data Consistency: Prevents duplicate or incorrect data.
+  3. Concurrency Control: Multiple users can access data at the same time.
+  4. Security: Provides access control to protect sensitive information.
+  5. Efficiency: Faster data retrieval using optimized queries.
+
+
+
+2). File-Based Storage System & Its Challenges?
+
+A file-based storage system is an old method of storing data in files, where records are written in text files or spreadsheets.
+
+Major Challenges of File-Based Storage Systems:
+  1. Data Redundancy: Data is duplicated in multiple files, leading to wastage of storage.
+  2. Data Inconsistency: Different copies of the same data might have different values.
+  3. Lack of Security: No user authentication; any user can access the files.
+  4. Difficulty in Accessing Data: Searching for data in multiple files is slow and inefficient.
+  5. No Concurrency Control: Multiple users cannot access files simultaneously without conflicts.
+
+
+3). What is a DBMS? Why Do We Need DBMS?
+
+A Database Management System (DBMS) is software that allows users to create, manage, and manipulate databases.
+
+Need for DBMS:
+  1. Eliminates file-based system problems (data redundancy, inconsistency, etc.).
+  2. Provides security with authentication and access control.
+  3. Efficient data retrieval using queries.
+  4. Supports multiple users accessing data concurrently.
+  5. Ensures data integrity by enforcing constraints.
+    Examples of DBMS:
+      -> MySQL
+      -> PostgreSQL
+      -> Oracle
+      -> MongoDB
+
+
+4). Challenges of File-Based Storage Tackled by DBMS
+
+  1. Data Redundancy Control: DBMS eliminates data duplication using a centralized database.
+  2.Data Consistency: Ensures data accuracy across multiple applications.
+  3.Data Security: Provides access control mechanisms to restrict unauthorized access.
+  4.Efficient Data Access: Uses indexes and queries to retrieve data quickly.
+  5.Concurrent Access: Supports multiple users accessing the database at the same time.
+
+
+5). Classification of DBMS?
+
+DBMS can be classified into different types based on data model and distribution.
+
+Based on Data Model:
+  1.Hierarchical DBMS: Data is organized in a tree-like structure. (Example: IBM Information Management System)
+  2.Network DBMS: Uses graph structures for relationships. (Example: Integrated Data Store)
+  3.Relational DBMS (RDBMS): Stores data in tables with rows and columns. (Example: MySQL, PostgreSQL)
+  4.Object-Oriented DBMS (OODBMS): Stores data as objects (Example: MongoDB)
+Based on Distribution:
+  1.Centralized DBMS: Data is stored in a single location.
+  2.Distributed DBMS: Data is stored across multiple locations and synchronized.
+  3.Cloud DBMS: Data is stored in the cloud (Example: Google Cloud Firestore, AWS RDS).
+
+
+6). Significance of Data Modeling & Its Types?
+
+Data modeling is the process of designing a database structure to organize data effectively.
+
+Significance of Data Modeling:
+  1.Ensures Data Consistency: Helps maintain integrity and accuracy.
+  2.Improves Database Performance: Optimizes data retrieval.
+  3.Simplifies Database Design: Provides a clear blueprint for developers.
+  4.Enhances Communication: Helps teams understand data relationships.
+Types of Data Models:
+  1.Conceptual Data Model: High-level representation of business rules.
+  2.Logical Data Model: Defines the structure of data using tables, attributes, and relationships.
+  3.Physical Data Model: Specifies how data will be stored in the database (indexes, storage).
+
+
+7). Three-Schema Architecture & Its Advantages?
+
+The Three-Schema Architecture divides the database system into three levels for abstraction and better management.
+
+1. External Schema (User Level)
+  -> What the user sees (UI, Reports, Queries).
+  -> Each user may have a different view of the database.
+2. Conceptual Schema (Logical Level)
+  -> Defines the structure of the entire database (tables, relationships).
+  ->Ensures data integrity and security.
+3. Internal Schema (Physical Level)
+  -> Describes how data is stored physically (indexes, partitions).
+  -> Optimized for performance and storage efficiency.
+
+Advantages of Three-Schema Architecture:
+  1.Data Abstraction: Users interact with high-level views without knowing physical storage details.
+  2.Improved Security: Different users have different access levels.
+  3.Independence: Changes in storage do not affect user views.
+  4.Better Performance: Optimization at the physical level without changing application logic.
+  5.Scalability: The database can grow without affecting users.
