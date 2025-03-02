@@ -1,0 +1,220 @@
+1. You are starting a new JavaScript project and need to set up version control.
+  
+Task-1:
+Initialize a Git repository for your JavaScript project.
+Task-2:
+Create a file named script.js with a simple JavaScript function.
+Task-3:
+Add and commit the changes.
+
+  Ans. 
+  Task-1:
+  1.Open your terminal (or Git Bash).
+  2.Navigate to your project folder:
+    cd /path/to/your/project
+
+  Task-2:
+  1.Create a file named script.js:
+  touch script.js
+  2.Open script.js in a code editor and add a simple JavaScript function:
+  function sayHello() {
+    console.log("Hello, World!");
+    }
+    sayHello();
+
+  Task-3:
+  1.Add the file to staging:
+  git add script.js
+  2.Commit the changes:
+  git commit -m "Initial commit with script.js"
+
+
+
+2. Task-1:
+Create a new branch named feature-greeting.
+Task-2:
+Switch to the new branch.
+Task-3:
+Add a new function in script.js that displays a personalized greeting.
+Task-4:
+Commit the changes in the feature branch.
+Task-5:
+Merge feature-greeting into the main branch.
+Task-6:
+Switch back to the main branch.
+
+
+  Ans.
+  Task-1:
+  git branch feature-greeting
+
+  Task-2:
+  git checkout feature-greeting
+
+  Task-3:
+  Edit script.js and add the following function:
+    function greetUser(name) {
+    console.log(`Hello, ${name}! Welcome to the project.`);
+    }
+    greetUser("Alice");
+
+  Task-4:
+  git add script.js
+  git commit -m "Added personalized greeting function"
+
+  Task-5:
+  1.Switch to the main branch:
+  git checkout main
+  2.Merge the feature branch:
+  git merge feature-greeting
+
+  Task-6:
+  git checkout main
+
+
+3.
+Task-1:
+ Create a GitHub repository for your JavaScript project.
+Task-2
+ Push your local repository to the GitHub repository.
+Task-3
+ Invite a team member to collaborate on the GitHub repository.
+Task-4
+ Your team member should clone the repository and make a change.
+Task-5
+ Fetch and merge the changes made by your team member.
+
+
+   Ans.
+
+   Task-1:
+    1.Go to GitHub and create a new repository.
+    2.Copy the repository URL.
+
+    Task-2:
+    1.Add the GitHub repository as a remote:
+    git remote add origin <your-repo-URL>
+    2.Push the changes:
+    git push -u origin main
+
+    Task-3:
+    1.Go to your GitHub repository.
+    2.Click Settings → Collaborators.
+    3.Add your team member by entering their GitHub username or email.
+
+    Task-4:
+    1.Clone the repository:
+    git clone <your-repo-URL>
+    cd <your-project-folder>
+    2.Make a change (e.g., add a comment in script.js).
+    3.Commit and push the changes:
+      git add script.js
+      git commit -m "Updated script.js with comments"
+      git push origin main
+
+    Task-5:
+    1.Fetch the latest changes:
+    git fetch origin
+    2.Merge the changes:
+    git merge origin/main
+
+
+4.
+  ->Create a new branch named feature-update
+  -> Switch to the new branch and make changes to script.js
+  ->Commit the changes in the feature branch
+  ->Switch back to the main branch and make different changes to script.js
+  ->Commit the changes in the main branch
+  ->Attempt to merge feature-update into the main branch
+  ->Resolve any merge conflicts that occur.
+
+
+  Ans.
+    Step 1: Create and Work on feature-update Branch
+
+    Task 1: Create a new branch named feature-update
+    git branch feature-update
+
+    Task 2: Switch to the feature-update branch
+    git checkout feature-update
+
+    Task 3: Make changes to script.js
+    Open script.js and modify it. For example, add a new function:
+      function farewellUser(name) {
+    console.log(`Goodbye, ${name}! See you soon.`);
+    }
+    farewellUser("Alice");
+
+    Task 4: Commit the changes in the feature-update branch
+    git add script.js
+    git commit -m "Added farewellUser function"
+
+
+    Step 2: Switch to main Branch and Make Different Changes
+
+    Task 5: Switch back to the main branch
+    git checkout main
+
+    Task 6: Make different changes to script.js
+    Modify script.js again. For example, update the greetUser function:
+      function greetUser(name) {
+    console.log(`Hey ${name}, welcome! Have a great day.`);
+    }
+    greetUser("Bob");
+
+    Task 7: Commit the changes in the main branch
+    git add script.js
+    git commit -m "Updated greetUser function"
+
+
+    Step 3: Merge feature-update into main
+
+    Task 8: Attempt to merge feature-update into main
+    git merge feature-update
+
+
+    Step 4: Resolve Merge Conflicts
+
+    Task 9: If conflicts occur
+  
+    1.Open script.js. You will see conflict markers like this:
+      <<<<<<< HEAD
+      function greetUser(name) {
+    console.log(`Hey ${name}, welcome! Have a great day.`);
+    }
+      greetUser("Bob");
+        =======
+    function farewellUser(name) {
+    console.log(`Goodbye, ${name}! See you soon.`);
+    }
+    farewellUser("Alice");
+      >>>>>>> feature-update
+
+    2.Manually resolve the conflict by deciding how to merge the functions. For example:
+      function greetUser(name) {
+    console.log(`Hey ${name}, welcome! Have a great day.`);
+    }
+    greetUser("Badri");
+
+    function farewellUser(name) {
+    console.log(`Goodbye, ${name}! See you soon.`);
+    }
+    farewellUser("Abhi");
+
+    Task 10: Stage and commit the resolved merge
+    git add script.js
+    git commit -m "Resolved merge conflict and combined functions"
+
+    Task 11: Verify that everything is merged correctly
+    git status
+
+    Task 12: Push the final changes to GitHub
+    git push origin main
+
+
+
+
+
+
+
+  
